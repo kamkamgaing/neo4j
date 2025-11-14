@@ -110,19 +110,6 @@ query = cypher_query17  # kNN + Pearson
 
 ---
 
-## Structure du dépôt
-
-```
-.
-├── main.py              # Script principal
-├── .env                    # (à créer) identifiants Neo4j
-├── README.md               # Ce fichier
-├── requirements.txt        # Dépendances
-└── data/                   # (optionnel) dataset MovieLens
-```
-
----
-
 ## Dataset utilisé
 
 Basé sur un **graphe de films** avec les nœuds/relations suivants :
