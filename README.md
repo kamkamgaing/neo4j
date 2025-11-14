@@ -81,7 +81,7 @@ __pycache__
 ## Lancer le projet
 
 ```bash
-python example.py
+python main.py
 ```
 
 ### Changer de requête
