@@ -157,7 +157,7 @@ Basé sur un **graphe de films** avec les nœuds/relations suivants :
 
 ## Auteur
 
-**Ton Nom** – *Data Scientist / Graph Enthusiast*
+**KAM KAMGAING** – *Data Scientist / AI*
 
 ---
 
