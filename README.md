@@ -164,12 +164,3 @@ Basé sur un **graphe de films** avec les nœuds/relations suivants :
 ## License
 
 [MIT License](LICENSE) – Libre d’utilisation, modification, partage.
-
----
-
-> **Prêt à explorer la puissance des graphes dans les recommandations ?**  
-> **Lance, teste, modifie, impressionne.**
-
----
-
-**Bon graphe !**
