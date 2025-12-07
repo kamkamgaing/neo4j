@@ -1,6 +1,5 @@
 ````markdown
-# **README – Neo4j Movie Recommender System**  
-*Un projet complet de système de recommandation de films avec Neo4j & Python*
+# **README – Neo4j Movie Recommender System** *Un projet complet de système de recommandation de films avec Neo4j & Python*
 
 ---
 
@@ -12,84 +11,63 @@
 
 ## Description
 
-Ce dépôt contient un **système de recommandation de films avancé** basé sur **Neo4j**, utilisant **Cypher** pour implémenter :
+Ce dépôt contient un **système de recommandation de films avancé** basé sur **Neo4j**, utilisant **Cypher** pour implémenter des logiques complexes de filtrage et de similarité :
 
-- Filtrage basé sur le contenu  
-- Filtrage collaboratif  
-- Similarités (Jaccard, Cosine, Pearson)  
-- k-NN personnalisé  
-- Recommandations hybrides  
+- 🔹 Filtrage basé sur le contenu  
+- 🔹 Filtrage collaboratif  
+- 🔹 Similarités (Jaccard, Cosine, Pearson)  
+- 🔹 k-NN personnalisé  
+- 🔹 Recommandations hybrides  
 
-Le tout dans un **seul script Python** avec **17 requêtes prêtes à l’emploi**.
+Le tout est orchestré dans un **seul script Python** modulaire contenant **17 requêtes prêtes à l’emploi**.
 
 ---
 
 ## Fonctionnalités
 
-| Type | Requête | Description |
-|------|--------|-----------|
+| Type | ID Requête | Description |
+|:-----|:----------|:------------|
 | **Analyse** | `cypher_query1` | Top 5 *Mission: Impossible* par nombre de critiques |
 | **Exploration** | `cypher_query2` | Graphe de similarité autour de *Inception* |
 | **Collaboratif** | `cypher_query3` | "Ceux qui ont vu X ont aussi vu Y" |
 | **Contenu** | `cypher_query4–6` | Similarité par genres, acteurs, réalisateurs |
 | **Jaccard** | `cypher_query7–8` | Similarité ensembliste (genres + traits) |
 | **Utilisateur** | `cypher_query9–11` | Analyse des goûts d’Andrew Freeman |
-| **Collaboratif avancé** | `cypher_query12–13` | Peers + popularité + note |
-| **Hybride** | `cypher_query14` | Genres préférés + non vus |
-| **Similarité** | `cypher_query15` | Cosine entre utilisateurs |
-| **Similarité** | `cypher_query16` | Pearson entre utilisateurs |
-| **kNN** | `cypher_query17` | Recommandation finale avec Pearson |
+| **Collaboratif Avancé** | `cypher_query12–13` | Peers + popularité + note pondérée |
+| **Hybride** | `cypher_query14` | Genres préférés + films non vus |
+| **Similarité** | `cypher_query15` | Similarité Cosine entre utilisateurs |
+| **Similarité** | `cypher_query16` | Corrélation de Pearson entre utilisateurs |
+| **kNN** | `cypher_query17` | Recommandation finale avec k-NN & Pearson |
 
 ---
 
-## Prérequis
+## ⚙️ Prérequis & Installation
 
-```bash
-Python 3.8+
-Neo4j Aura 
-````
+### 1. Environnement
+Assurez-vous d'avoir :
+- **Python 3.8+**
+- Une instance **Neo4j** (Desktop ou AuraDB) active.
 
-### Installation
+-----
 
-```bash
-pip install neo4j python-dotenv
-```
+## ▶️ Utilisation
 
----
-
-### 2. Ajoute au `.gitignore`
-
-```gitignore
-.env
-__pycache__
-*.pyc
-```
-
----
-
-## Lancer le projet
+Pour lancer le script principal :
 
 ```bash
 python main.py
 ```
 
-### Changer de requête
+### Changer de requête active
 
-Modifie cette ligne dans `main.py` :
-
-```python
-query = cypher_query1  # Change ici (1 à 17)
-```
-
-Exemple :
+Ouvrez `main.py` et modifiez la variable `query` pour tester différents algorithmes (de 1 à 17) :
 
 ```python
-query = cypher_query17  # kNN + Pearson
+# Exemple pour tester le kNN avec Pearson
+query = cypher_query17  
 ```
 
----
-
-## Sortie
+### Exemple de Sortie
 
 ```text
 ----- Résultats -----
@@ -98,30 +76,25 @@ query = cypher_query17  # kNN + Pearson
 ...
 ```
 
----
+## 📊 Dataset & Schéma
 
-## Structure du dépôt
+Le projet est conçu pour fonctionner sur un graphe de films standard (type MovieLens), structuré comme suit :
 
----
+**Nœuds et Relations :**
 
-## Dataset utilisé
-
-Basé sur un **graphe de films** avec les nœuds/relations suivants :
-
-```
+```cypher
 (User)-[:RATED {rating}]->(Movie)
 (Movie)-[:IN_GENRE]->(Genre)
 (Movie)<-[:ACTED_IN]-(Person)
 (Movie)<-[:DIRECTED]-(Person)
 ```
 
-> Compatible avec **MovieLens**, **IMDb**, ou tout graphe similaire.
+> Compatible avec **MovieLens**, **IMDb**, ou les datasets exemples de Neo4j Sandbox.
 
----
+-----
 
-## Auteur
+## 👤 Auteur
 
 **Kam kamgaing**
 
-```
-```
+-----
