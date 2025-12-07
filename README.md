@@ -1,5 +1,5 @@
-````markdown
-# **README – Neo4j Movie Recommender System** *Un projet complet de système de recommandation de films avec Neo4j & Python*
+# **Neo4j Movie Recommender System**
+*Un projet complet de système de recommandation de films avec Neo4j & Python*
 
 ---
 
@@ -9,7 +9,7 @@
 
 ---
 
-## Description
+## 📖 Description
 
 Ce dépôt contient un **système de recommandation de films avancé** basé sur **Neo4j**, utilisant **Cypher** pour implémenter des logiques complexes de filtrage et de similarité :
 
@@ -19,11 +19,11 @@ Ce dépôt contient un **système de recommandation de films avancé** basé sur
 - 🔹 k-NN personnalisé  
 - 🔹 Recommandations hybrides  
 
-Le tout est orchestré dans un **seul script Python** modulaire contenant **17 requêtes prêtes à l’emploi**.
+Le tout est orchestré dans un **seul script Python** modulaire contenant **17 requêtes prêtes à l'emploi**.
 
 ---
 
-## Fonctionnalités
+## ✨ Fonctionnalités
 
 | Type | ID Requête | Description |
 |:-----|:----------|:------------|
@@ -32,7 +32,7 @@ Le tout est orchestré dans un **seul script Python** modulaire contenant **17 r
 | **Collaboratif** | `cypher_query3` | "Ceux qui ont vu X ont aussi vu Y" |
 | **Contenu** | `cypher_query4–6` | Similarité par genres, acteurs, réalisateurs |
 | **Jaccard** | `cypher_query7–8` | Similarité ensembliste (genres + traits) |
-| **Utilisateur** | `cypher_query9–11` | Analyse des goûts d’Andrew Freeman |
+| **Utilisateur** | `cypher_query9–11` | Analyse des goûts d'Andrew Freeman |
 | **Collaboratif Avancé** | `cypher_query12–13` | Peers + popularité + note pondérée |
 | **Hybride** | `cypher_query14` | Genres préférés + films non vus |
 | **Similarité** | `cypher_query15` | Similarité Cosine entre utilisateurs |
@@ -44,11 +44,13 @@ Le tout est orchestré dans un **seul script Python** modulaire contenant **17 r
 ## ⚙️ Prérequis & Installation
 
 ### 1. Environnement
-Assurez-vous d'avoir :
-- **Python 3.8+**
-- Une instance **Neo4j** (Desktop ou AuraDB) active.
 
------
+Assurez-vous d'avoir :
+
+- **Python 3.8+**
+- Une instance **Neo4j** (Desktop ou AuraDB) active
+
+---
 
 ## ▶️ Utilisation
 
@@ -76,6 +78,8 @@ query = cypher_query17
 ...
 ```
 
+---
+
 ## 📊 Dataset & Schéma
 
 Le projet est conçu pour fonctionner sur un graphe de films standard (type MovieLens), structuré comme suit :
@@ -91,10 +95,8 @@ Le projet est conçu pour fonctionner sur un graphe de films standard (type Movi
 
 > Compatible avec **MovieLens**, **IMDb**, ou les datasets exemples de Neo4j Sandbox.
 
------
+---
 
 ## 👤 Auteur
 
-**Kam kamgaing**
-
------
+**Kam Kamgaing**
