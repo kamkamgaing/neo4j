@@ -1,3 +1,4 @@
+````markdown
 # **README – Neo4j Movie Recommender System**  
 *Un projet complet de système de recommandation de films avec Neo4j & Python*
 
@@ -46,7 +47,7 @@ Le tout dans un **seul script Python** avec **17 requêtes prêtes à l’emploi
 ```bash
 Python 3.8+
 Neo4j Aura 
-```
+````
 
 ### Installation
 
@@ -55,18 +56,6 @@ pip install neo4j python-dotenv
 ```
 
 ---
-
-## Configuration
-
-### 1. Crée un fichier `.env`
-
-```env
-NEO4J_URI=neo4j+s://2a9865c8.databases.neo4j.io
-NEO4J_USERNAME=neo4j
-NEO4J_PASSWORD=ton_mot_de_passe_securise
-```
-
-> **Ne jamais committer `.env` !**
 
 ### 2. Ajoute au `.gitignore`
 
@@ -81,7 +70,7 @@ __pycache__
 ## Lancer le projet
 
 ```bash
-python example.py
+python main.py
 ```
 
 ### Changer de requête
@@ -93,6 +82,7 @@ query = cypher_query1  # Change ici (1 à 17)
 ```
 
 Exemple :
+
 ```python
 query = cypher_query17  # kNN + Pearson
 ```
@@ -112,15 +102,6 @@ query = cypher_query17  # kNN + Pearson
 
 ## Structure du dépôt
 
-```
-.
-├── main.py              # Script principal
-├── .env                    # (à créer) identifiants Neo4j
-├── README.md               # Ce fichier
-├── requirements.txt        # Dépendances
-└── data/                   # (optionnel) dataset MovieLens
-```
-
 ---
 
 ## Dataset utilisé
@@ -138,38 +119,9 @@ Basé sur un **graphe de films** avec les nœuds/relations suivants :
 
 ---
 
-## Sécurité
-
-- Utilise `.env` pour les identifiants
-- Mot de passe **jamais en clair**
-- Régénère immédiatement si compromis
-
----
-
-## Contribuer
-
-1. Fork le projet
-2. Crée une branche (`git checkout -b feature/amazing`)
-3. Commit (`git commit -m 'Add amazing feature'`)
-4. Push & Pull Request
-
----
-
 ## Auteur
 
-**Ton Nom** – *Data Scientist / Graph Enthusiast*
+**Kam kamgaing**
 
----
-
-## License
-
-[MIT License](LICENSE) – Libre d’utilisation, modification, partage.
-
----
-
-> **Prêt à explorer la puissance des graphes dans les recommandations ?**  
-> **Lance, teste, modifie, impressionne.**
-
----
-
-**Bon graphe !**
+```
+```
